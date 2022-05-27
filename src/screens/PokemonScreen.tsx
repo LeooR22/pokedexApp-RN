@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {RootStackParams} from '../navigator/Navigator';
+import {RootStackParams} from '../navigator/TabList';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {FadeInImage} from '../components/FadeInImage';
 import {usePokemon} from '../hooks/usePokemon';
@@ -22,7 +22,7 @@ export const PokemonScreen: FC<Props> = ({navigation, route}) => {
   const {name, id, picture} = simplePokemon;
   const {top} = useSafeAreaInsets();
   const {isLoading, pokemon: pokemonFull} = usePokemon(id);
-  console.log(pokemonFull);
+  // console.log(pokemonFull);
 
   return (
     <View style={{flex: 1}}>
